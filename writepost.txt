@@ -1,0 +1,65 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Morning Motivation",
+        "content": "Start your day with a small win—make your bed, drink water, and take a deep breath.",
+        "tags": ["motivation", "morning", "wellness"]
+      },
+      {
+        "id": 2,
+        "title": "Tech Tip Tuesday",
+        "content": "Remember to update your passwords regularly and enable 2FA for better security.",
+        "tags": ["technology", "cybersecurity", "tips"]
+      },
+      {
+        "id": 3,
+        "title": "Healthy Habits",
+        "content": "A 10-minute walk after meals can improve digestion and boost energy levels.",
+        "tags": ["health", "lifestyle", "fitness"]
+      },
+      {
+        "id": 4,
+        "title": "Productivity Boost",
+        "content": "Try the Pomodoro technique: 25 minutes of focused work followed by a 5-minute break.",
+        "tags": ["productivity", "work", "focus"]
+      },
+      {
+        "id": 5,
+        "title": "Fun Fact Friday",
+        "content": "Honey never spoils—archaeologists found 3,000-year-old edible honey in ancient tombs.",
+        "tags": ["funfact", "science", "random"]
+      },
+      {
+        "id": 6,
+        "title": "Weekend Reminder",
+        "content": "It’s okay to rest. Productivity isn’t the measure of your worth.",
+        "tags": ["mentalhealth", "weekend", "selfcare"]
+      },
+      {
+        "id": 7,
+        "title": "Coding Insight",
+        "content": "Clean code is not just for machines—it’s for humans who read it later.",
+        "tags": ["coding", "programming", "software"]
+      },
+      {
+        "id": 8,
+        "title": "Book of the Week",
+        "content": "‘Atomic Habits’ teaches how small daily improvements compound into major changes.",
+        "tags": ["books", "habits", "learning"]
+      },
+      {
+        "id": 9,
+        "title": "Quote of the Day",
+        "content": "“The best time to plant a tree was 20 years ago. The second best time is now.”",
+        "tags": ["quote", "inspiration", "life"]
+      },
+      {
+        "id": 10,
+        "title": "Travel Tip",
+        "content": "Always keep digital copies of your passport and important documents when traveling.",
+        "tags": ["travel", "advice", "safety"]
+      }
+    ]
+  }
+  
