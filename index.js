@@ -150,3 +150,6 @@ console.log(abpath)
 fs.readFile(abpath, 'utf-8', (err,data)=>{
   console.log(data)
   })
+
+
+  //
