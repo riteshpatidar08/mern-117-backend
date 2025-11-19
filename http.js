@@ -5,8 +5,15 @@ const http = require('http');
 //step 1 server => 24*7 => localhost:3000
 const server = http.createServer((req, res) => {
   console.log(req.method);
+  console.log(req.headers)
+  console.log(res.headers)
   if (req.url === '/orders' && req.method === 'GET') {
-    res.end('pizza burger');
+    res.statusCode = 200
+    res.setHeader('name' , 'ritesh')
+    res.end('order list');
+  } else {
+    res.statusCode = 404
+    res.end('not found')
   }
 });
 
@@ -40,3 +47,19 @@ server.listen(3000, () => {
 //tables => GET
 //tables edit => put and patch
 //table delete
+
+
+//restaurent qr => 
+    // resources api
+
+//users //tables //orders // menu 
+
+//status code 201
+//users //tables create //order creawte //menu create 
+
+
+
+
+//request => url , method 
+//response => data  , headers 
+// headers
