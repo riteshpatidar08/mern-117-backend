@@ -9,18 +9,28 @@ const server = http.createServer((req, res) => {
 
     fs.readFile(filePath, 'utf-8', (err, data) => {
       console.log(data);
+
       res.writeHead(200, {
         "name" : "ritesh"
       })
-      res.end(data); //req-res cycle end here
+      res.end(JSON.stringify(data)); //req-res cycle end here
     
     });
   } else if (req.url === '/task' && req.method === 'GET') {
     res.end('hello');
   }
 });
+//listener
+server.on('request',(req)=>{
+  console.log('request hit')
+})
 
-server.listen(5000, () => {
+server.on('connection' , ()=>{
+    console.log('tcp connection made')
+})
+// console.log('hello')
+
+server.listen(3000, () => {
   console.log('Server is running on 5000');
 });
 
@@ -29,3 +39,15 @@ server.listen(5000, () => {
 //req.headers
 
 //task 1 get the post list
+
+
+//restaurent  
+// tables 
+// menu 
+// orders 
+// users
+
+
+
+
+// client => /posts => tcp connection => request hit
