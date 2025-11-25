@@ -2,13 +2,11 @@ import express from 'express' ;
 
 
 const app = express() ;
-
+//NOTE GLOBAL MIDDLEWARES
 //NOTE Middleware1
 app.use((req,res,next)=>{
-req.body = {
-    name : "ritesh"
-}
-res.send('this is response is send by middleware 1')
+req.token = null
+next()
 
 })
 
@@ -19,9 +17,23 @@ next()
 //req => middleware1 next() => middleware2 next() => /home
 
 //middleware functions have access of req,and res
-app.get('/home' ,(req,res)=>{
+
+// /home api hit tabhi middleware ko execute karna hain
+const homeMiddleware = (req,res,next) =>{
+  if(req.token){
+    next()
+  }else {
+    res.send('please log in to access home route')
+  }
+}
+
+app.get('/home' , homeMiddleware , (req,res)=>{
     console.log(req.body)
 res.send('homepage')
+})
+
+app.get('/orders',(req,res)=>{
+    res.send('orders')
 })
 
 app.listen(3000,()=>{
@@ -32,3 +44,8 @@ app.listen(3000,()=>{
 
 
 //login nhi ho => /movies => 
+
+
+    //client /home => middleware1 => middleware2 => /home => homeMiddleware => controller
+
+    //checkrole => 'admin' => /users route access kr skta hain
