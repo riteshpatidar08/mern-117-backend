@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "name": "Homework 1: Express Routes",
+      "subject": "Node.js",
+      "due_date": "2026-02-01"
+    },
+    {
+      "id": 2,
+      "name": "Project: To-Do List App",
+      "subject": "React",
+      "due_date": "2026-02-15"
+    }
+  ]

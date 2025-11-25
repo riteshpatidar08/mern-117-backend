@@ -101,8 +101,16 @@ const url  = new URL('https://localhost:3000/movies?search=haq');
 const newurl  = new URL("https://localhost:3000/product?minPrice=2000&&maxPrice=5000")
 //params
 const userurl = new URL("https://localhost:3000/users/50")
+console.log(userurl)
 console.log(userurl.pathname.split('/')[2]) //in url class (req.params)
 console.log(url.searchParams.get('search'))
 console.log(newurl.searchParams.get('minPrice'))
 console.log(newurl.searchParams.get('maxPrice'))
 
+//params  =>  http://localhost:3000/:id => http://localhost:3000/50
+//query params  => page=3&categroy=electronics
+
+//express=> fs streaming
+
+//express => http module 
+fs , url , os ,path

@@ -2,7 +2,7 @@ exports.course = 'mern'
 console.log(module) 
 
 const course = 'mean'
-module.exports = course
+module.exports 
 
 console.log(module)
 // module.exports = course
