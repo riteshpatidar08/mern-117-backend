@@ -1,9 +1,9 @@
 import express from 'express'
-import { getOrders } from './controllers/orderController.js';
+import { createOrder, deleteOrder, getOrders ,getSingleOrder} from './controllers/orderController.js';
 import { getUsers } from './controllers/userController.js';
 
 const app = express() ;
-
+app.use(express.json())
 //API => REST API'S => CLIENT AND SERVER COMMUNICATION
 //API => url endpoints => client  (/orders)
 //HTTP METHODS => GET , POST , PUT , PATCH , DELETE 
@@ -14,7 +14,11 @@ const app = express() ;
 
 
 
-app.get('/orders',getOrders)
+// app.get('/orders',getOrders)
+app.delete('/orders/:id', deleteOrder)
+app.get('/orders/:id',getSingleOrder)
+// app.post('/orders', createOrder)
+app.route('/orders').get(getOrders).post(createOrder)
 //users
 app.get('/users',getUsers)
 
