@@ -5,7 +5,7 @@ const orderData = [
 ];
 
 export const getOrders = (req, res) => {
-  const { status, limit } = req.query;
+  const { status, limit=1 } = req.query;
   console.log(status);
   const filteredData = orderData.filter((order) => order.status === status);
   const limitData = filteredData.slice(0, Number(limit));
@@ -40,3 +40,6 @@ export const getSingleOrder = (req, res) => {
     data: filterdOrder,
   });
 };
+
+//update order 1  : status = PENDING , status = "DELIVERED"
+//params => req.body

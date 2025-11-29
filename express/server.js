@@ -1,6 +1,7 @@
 import express from 'express'
 import { createOrder, deleteOrder, getOrders ,getSingleOrder} from './controllers/orderController.js';
 import { getUsers } from './controllers/userController.js';
+import orderRoutes from './routes/orderRoutes.js'
 
 const app = express() ;
 app.use(express.json())
@@ -15,13 +16,23 @@ app.use(express.json())
 
 
 // app.get('/orders',getOrders)
-app.delete('/orders/:id', deleteOrder)
-app.get('/orders/:id',getSingleOrder)
-// app.post('/orders', createOrder)
-app.route('/orders').get(getOrders).post(createOrder)
-//users
+// app.delete('/orders/:id', deleteOrder)
+// app.get('/orders/:id',getSingleOrder)
+// // app.post('/orders', createOrder)
+// app.route('/orders').get(getOrders).post(createOrder)
+// //users
+
+app.use('/api/v1' , orderRoutes)
+// app.use('/api/v1', studentRoutes)
+// app.use('/api/v1' , userRoutes)
+
 app.get('/users',getUsers)
 
 app.listen(3000,()=>{
     console.log("SERVER IS RUNNING ON THE PORT 3000")
 })
+
+
+//resource => routes group 
+//products => routes group 
+//order => routes group
