@@ -1,65 +1,63 @@
-export const getUsers = (req,res)=>{
-    res.send('users')
-}
+export const getUsers = (req, res) => {
+  res.send('users');
+};
 
-//MONGODB 
+//MONGODB
 
 //DATABASE => query => users fetch =>  users/10
 
-//js=> /java , c++ 
+//js=> /java , c++
 
 //database => concept =>  //mysql => sql language //postgres => sql
 //angular =< js react => js , vue => js
 
+// (database) => (sql) => mysql, postgres, (nosql) => mongodb;
 
-database => sql => mysql , postgres , nosql => mongodb
+// (tables) => row, column;
+// (user) => id, name, email, age;
 
-tables => row , column 
-user => id , name , email , age
+//mongodb =>  community server 27017
 
-//mongodb =>  community server 27017 
+//project develop => movies
 
-//project develop => movies 
-
-//LEVEL 1 DATABASE CREATE => MOVIES 
+//LEVEL 1 DATABASE CREATE => MOVIES
 //LEVEL 2  MOVIES  , USERS => subfolder => collections
-//LEVEL 3 document => 50 movies 
+//LEVEL 3 document => 50 movies
 
 // client setup , server setup => conntect mongdb server
 //db //collection => crud => create docuemtn , read docuemtn , update docuemnt , delete docuemnt
 
 // 100 => 10 , 20 50 => ordres => concat => 500
 
-//level 1 => movies-db 
+//level 1 => movies-db
 //level 2 => ON THE BASIS OF RESOURCE YOU ARE GOING TO CREATE COLLECTION IN THE DB =>  movies collection / users => collection
 //level 3 db.users.insertOne() , db.movies.insertOne //create //retrieve //udpate //delete
 
 //NOTE users => tables => name , email , password  //nosql => no structure document
 
-//NOTE create operation in the db => ui form => post  
+//NOTE create operation in the db => ui form => post
 //NOTE read => read all data , speific single data, filter k accroding data read karna hain
-//NOTE how find query works => if data avaible array of object 
+//NOTE how find query works => if data avaible array of object
 //NOTE if data is not avaible => empty []
-
 
 // // if(!user){
 // console.log('please register and try again')}
 
 //filter  //query params => ui => server
-// age,email , name  
+// age,email , name
 
 // http://localhost:3000/user?age=23&email=test@gmail.com
 
-// age > 34 , age < 30 , age = 34  , age !=40 
-db.users.find({age : {$gt : 34}})
-db.users.find({field : {$operatorName : value}})
+// age > 34 , age < 30 , age = 34  , age !=40
+// db.users.find({ age: { $gt: 34 } });
+// db.users.find({ field: { $operatorName: value } });
 
 //NOTE comparison operators in find method
-//   greater than => $gt 
-//   less than => $lt 
-//   eqaul => $eq 
-//   not equal => $ne 
-//   greater than equal => $gte 
+//   greater than => $gt
+//   less than => $lt
+//   eqaul => $eq
+//   not equal => $ne
+//   greater than equal => $gte
 //   less than equal => $lte
 // $in  => in  ['delhi; , "NEW YORK"]
 // $nin => not
@@ -68,15 +66,35 @@ db.users.find({field : {$operatorName : value}})
 
 // $or & $and $nor $not
 
-db.users.find({$or : [{age : {$gt : 35}},{name : "ritesh"}]})
+// db.users.find({ $or: [{ age: { $gt: 35 } }, { name: 'ritesh' }] });
 
 //NOTE PROJECTION => db.users.find({}, {name : 1 , email : 1 , _id : 0})
 
 //document fetch => name ,email , age => db.users.find({},{email : 1 })
-// 1 => include , 0 => exclude 
+// 1 => include , 0 => exclude
 
-//NOTE PAGINATION USING BACKEND 
+//NOTE PAGINATION USING BACKEND
 //http://localhost:3000/users?limit=10&page=3
-// limit = 10 
+// limit = 10
 // page = 3
 // db.users.find().skip((page-1) * limit).limit(limit).sort({age : 1})
+
+//cr UPdate D => updateOne and updateMany ;
+// db.users.updateOne({ _id: 2 }, { $set: { name: 'ritesh' } });
+
+//update operators : $unset , $inc , $mul , $push , $pull ,  pop => 1 end => -1 start , $pull => field name
+
+//api => controller => routes => queryparams => params => query controller => CRUD
+//get => find() ;
+//create => insertOne , insertMany
+//update => updateone , updateMany
+//delete => deleteOne , deleteMany
+//get // => filter object => queryparams use
+
+
+//express application(server) => mongoose (odm) => mongodb server (db)
+                        //    validation , schema 
+                        //flexible => no sql schemaless 
+                        //validates 
+
+                        //db connect => resoucres (users, tables) => user schema , tables schema (model = collection)
